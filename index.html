@@ -43,14 +43,14 @@
 
     
     <section class="section section--columns">
-        <div class="columns shrink-grow-section">
+        <div class="columns shrink-grow-section"> 
             <div class="column-wrap">
                 <div class="column">
                     <div class="column__item">
                         <div class="column__item-img" style="background-image:url(assets/imgs/menu1.webp)"></div>
                     </div>
                     <div class="column__item">
-                        <div class="column__item-img" style="background-image:url(assets/imgs/menu2.webp)"></div>
+                        <div class="column__item-img" style="background-image:url(assets/imgs/menu11.webp)"></div>
                     </div>
                     <div class="column__item">
                         <div class="column__item-img" style="background-image:url(assets/imgs/menu3.webp)"></div>
@@ -69,20 +69,20 @@
                         <div class="column__item-img" style="background-image:url(assets/imgs/menu6.webp)"></div>
                     </div>
                     <div class="column__item">
-                        <div class="column__item-img" style="background-image:url(assets/imgs/menu5.webp)"></div>
+                        <div class="column__item-img" style="background-image:url(assets/imgs/menu7.webp)"></div>
                     </div>
                 </div><!-- /column -->
             </div>
             <div class="column-wrap">
                 <div class="column">
                     <div class="column__item">
-                        <div class="column__item-img" style="background-image:url(assets/imgs/menu5.webp)"></div>
+                        <div class="column__item-img" style="background-image:url(assets/imgs/menu8.webp)"></div>
                     </div>
                     <div class="column__item">
-                        <div class="column__item-img" style="background-image:url(assets/imgs/menu5.webp)"></div>
+                        <div class="column__item-img" style="background-image:url(assets/imgs/menu9.webp)"></div>
                     </div>
                     <div class="column__item">
-                        <div class="column__item-img" style="background-image:url(assets/imgs/menu5.webp)"></div>
+                        <div class="column__item-img" style="background-image:url(assets/imgs/menu10.webp)"></div>
                     </div>
                 </div><!-- /column -->
             </div><!-- /column-wrap -->
@@ -206,6 +206,104 @@
 
         </div>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const shrinkGrowSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".shrink-grow-section",
+        start: '100 center',
+        scrub: true, // For smoother animation
+        end: "max", // Adjust this value as needed
+        ease: 'stepped.out',
+        // markers: true,
+        // duration: 1,
+      },
+    });
+    
+    shrinkGrowSection
+      .fromTo(".shrink-grow-section", { scale: 1.2 }, { scale: 0.8 }) // Shrink animation
+      
+    </script>
+    
+    <!-- // gradient on page scroll -->
+    <script>
+        window.addEventListener('scroll', function() {
+          var divs = document.getElementsByClassName('shrink-grow-section');
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+          for (var i = 0; i < divs.length; i++) {
+            var opacity = 1.5 - scrollTop / (divs[i].offsetTop + divs[i].offsetHeight);
+            divs[i].style.opacity = opacity;
+          }
+        });
+      </script>
+
+// Lenis smooth scroll
+
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+
+<script>
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  direction: 'vertical', // vertical, horizontal
+  gestureDirection: 'vertical', // vertical, horizontal, both
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+})
+
+
+
+lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({ scroll, limit, velocity, direction, progress })
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
+
+<!-- Lenis smooth scroll -->
+
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+
+<script>
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  direction: 'vertical', // vertical, horizontal
+  gestureDirection: 'vertical', // vertical, horizontal, both
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+})
+
+
+
+lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({ scroll, limit, velocity, direction, progress })
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
 
     
 
