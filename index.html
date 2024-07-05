@@ -104,11 +104,18 @@
                 Teppanyaki is a modern form of Japanese cuisine, with a variety of dishes prepared in front of you, on a display of technique, aromas and flavors.
             </p> 
         </div>
-        <img class="grid-img" src="assets/imgs/prep.jpg" alt="chef cocinando">
+        <div class="grid-img">
+            <img src="assets/imgs/prep.jpg" alt="chef cocinando">
+        </div>
         
-        <p class="bottom-text">It’s a unique dinner experience, consisting on an eight course menu, in which every detail is taken care of, to offer our guests the quality they deserve. <br> <br>
+        <div class="bottom-text">
+            <p >It’s a unique dinner experience, consisting on an eight course menu, in which every detail is taken care of, to offer our guests the quality they deserve. <br> <br>
 
-            We are eager to show you this unique proposal that will surely please all your senses.</p>
+                We are eager to show you this unique proposal that will surely please all your senses.</p>
+
+        </div>
+        
+        
     </div>
     </section>
 
@@ -243,14 +250,14 @@
         });
       </script>
 
-// Lenis smooth scroll
+<!-- // Lenis smooth scroll -->
 
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
 
 <script>
 const lenis = new Lenis({
   duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
   direction: 'vertical', // vertical, horizontal
   gestureDirection: 'vertical', // vertical, horizontal, both
   smooth: true,
@@ -274,36 +281,7 @@ function raf(time) {
 requestAnimationFrame(raf)
 </script>
 
-<!-- Lenis smooth scroll -->
 
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-
-<script>
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-  direction: 'vertical', // vertical, horizontal
-  gestureDirection: 'vertical', // vertical, horizontal, both
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-})
-
-
-
-lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({ scroll, limit, velocity, direction, progress })
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-</script>
 
     
 
