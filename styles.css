@@ -150,6 +150,7 @@ body.no-scroll {
         font-family: var(--ff-body);
     }
 
+
     main {
         position: relative;
         width: 100%;
@@ -1320,23 +1321,6 @@ body.no-scroll {
             opacity: 1;
             padding-block: 50px;
            
-            
-
-
-            /* width: 100%;
-            display: flex;
-            height: calc(100% - 100px);
-            position: fixed;
-            top: 100px;
-            left: 0;
-            flex-direction: column;
-            justify-content: stretch;
-            align-items: center;
-            background-color: var(--clr-primary-400);
-            padding-block: 80px;
-            z-index: 999;
-            text-transform: uppercase;
-             */
         }
         
         header .logo {

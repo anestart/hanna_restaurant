@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanna Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -229,6 +230,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
     
     <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -261,6 +263,16 @@
           }
         });
       </script>
+
+       <script>
+        let tl = gsap.timeline({defaults: {ease: "SlowMo.easeOut"}});
+
+        tl.to(".create", {y: '0%', duration: 0.7, stagger:0.2});
+        tl.to(".main", {opacity:0, duration: 1, delay:0.5});
+        tl.fromTo("h1", {opacity:0}, {opacity:1, delay:0.3})
+
+
+    </script>
 
 <!-- // Lenis smooth scroll -->
 
