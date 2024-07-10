@@ -1090,7 +1090,7 @@ body.no-scroll {
         }
 
         header {
-            padding-block: 2rem 4rem;
+            padding-block: 2rem 3rem;
         }
 
         header .logo {
@@ -1276,6 +1276,7 @@ body.no-scroll {
             
         } 
 
+       
         .menuToggle {
             display: block;
         }
@@ -1352,11 +1353,12 @@ body.no-scroll {
         }
 
         .btn-holder1 {
+            position: static;
             display: flex;
             justify-content: center;
-            align-items: center;
-            left: 0;
-            bottom: 1rem;
+            align-items: flex-end;
+            padding: 1.5rem 0;
+            
         }
 
         .circle-btn {
@@ -1508,10 +1510,7 @@ body.no-scroll {
             grid-template-columns: repeat(1, minmax(0, 1fr));
         }
 
-        .footer-bottom {
-            max-width: 300px;
-        }
-
+       
 
 
        
