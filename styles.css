@@ -1345,6 +1345,7 @@ body.no-scroll {
 
 
         main { 
+            height: 100%;
             margin-bottom: 56vh;
         }
 
