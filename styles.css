@@ -559,9 +559,9 @@ body.no-scroll {
 
     h1 {
         position: absolute;
-        left: 50%;
-        top: calc(50% + 70px);
-        transform: translate(-50%, -50%);
+        left: 0;
+        right: 0;
+        top: 55%;
     }
 
 
@@ -986,9 +986,9 @@ body.no-scroll {
                 display: flex;
                 gap: 1rem;
                 position: relative;
-                left: 25%;
-                top: 50%;
-                transform: translate(-50%, 50%);;
+                top: 2.5rem;
+                left: 0;
+                right: 0;
                 
                 
                 
@@ -1434,7 +1434,7 @@ body.no-scroll {
         }
 
         .chef-container h1 {
-            left: 33%;
+            top: 1.5rem;
           
         }
         
