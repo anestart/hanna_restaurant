@@ -274,7 +274,7 @@ body.no-scroll {
 
     .btn-holder1 {
         position: static;
-        padding: 4rem;
+        padding: 0 0 4rem 4rem;
         width: 100%;
         display: block;
         justify-content: flex-start;
