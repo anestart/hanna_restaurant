@@ -1384,7 +1384,7 @@ body.no-scroll {
 
         .vertical {
             margin-top: 11.25rem;
-            margin-left: 90%;
+            right: -1.625rem;
         }
 
         .story {
