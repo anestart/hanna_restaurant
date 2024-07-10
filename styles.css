@@ -1346,7 +1346,7 @@ body.no-scroll {
 
         main { 
             height: 100%;
-            margin-bottom: 56vh;
+            margin-bottom: 64vh;
         }
 
         .cta {
@@ -1358,7 +1358,7 @@ body.no-scroll {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            padding: 1.5rem 0;
+            padding: 4rem 0;
             
         }
 
